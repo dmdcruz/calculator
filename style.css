@@ -1,0 +1,66 @@
+/* style.css */
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+    width: 100%;
+}
+
+.btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #eee;
+    color: #333;
+    margin: 5px;
+}
+
+.btnNumber {
+    background-color: #666;
+    color: #fff;
+}
+
+.btnOperator {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+.btnClear {
+    background-color: #ff3333;
+    color: #fff;
+}
+
+.btnEqual {
+    background-color: #33cc33;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+

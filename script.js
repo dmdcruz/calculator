@@ -20,12 +20,23 @@ operatorButtons.forEach(((operatorButton) => {
 //Populate display fater click in one number
 numberButtons.forEach(((numberButton) => {
     numberButton.addEventListener("click",() => {
-        display.textContent = numberButton.textContent;
+    
         if (operator === "") {
-            firstNumber = parseFloat(numberButton.textContent);
+            if (firstNumber === "") {
+                firstNumber = numberButton.textContent;    
+            } else {
+                firstNumber = firstNumber + numberButton.textContent;
+            }
+            display.textContent = firstNumber;
         }
+       
         if (operator !== "") {
-            secondNumber = parseFloat(numberButton.textContent);
+            if (secondNumber === "") {
+                secondNumber = numberButton.textContent;    
+            } else {
+                secondNumber = secondNumber + numberButton.textContent;
+            }
+            display.textContent = secondNumber;
         }
     });
 }));
@@ -47,6 +58,8 @@ clearButton.addEventListener("click" ,() => {
 //operate function
 function operate(operator, firstNumber, secondNumber) {
     let result = 0;
+    firstNumber = parseFloat(firstNumber);
+    secondNumber = parseFloat(secondNumber);
     
     if (operator == "+") {
         result = Add(firstNumber, secondNumber);
